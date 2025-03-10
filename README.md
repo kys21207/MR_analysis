@@ -7,4 +7,5 @@
 - Install TwoSampleMR
 install.packages("TwoSampleMR", repos = c("https://mrcieu.r-universe.dev", "https://cloud.r-project.org"))
 - Install MRPRESSO from GitHub
-devtools::install_github("rondolab/MR-PRESSO")
+devtools::install_github("rondolab/MR-PRESSO") <br>
+** take a long time to install dependency **
