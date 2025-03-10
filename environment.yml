@@ -1,0 +1,27 @@
+name: mr_analysis
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - r-base=4.1.2
+  - r-devtools
+  - r-data.table
+  - r-progress
+  - r-boot
+  - r-minqa
+  - r-nloptr
+  - r-hms
+  - r-vroom
+  - r-tzdb
+  - r-metafor
+  - r-lme4
+  - r-compquadform
+  - r-readr
+  - r-mnormt
+  - r-gparotation
+  - r-rcpp
+  - r-meta
+  - r-pbapply
+  - r-psych
+  - r-reshape2
+ 
