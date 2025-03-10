@@ -1,7 +1,7 @@
 # MR_analysis
 ## Install MR packages based on DNAnexus
 1. First, create the environment.yml file <br>
-2. conda env create -f environment.yml <br>
+2. conda env create -f environment.yml <br> ** Take a long time to install **
 3. conda activate mr_analysis <br>
 4. Next, open R within the activated conda environment and install the missing packages: <br>
 - Install TwoSampleMR
