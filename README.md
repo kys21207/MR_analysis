@@ -9,3 +9,7 @@ install.packages("TwoSampleMR", repos = c("https://mrcieu.r-universe.dev", "http
 - Install MRPRESSO from GitHub
 devtools::install_github("rondolab/MR-PRESSO") <br>
 ** take a long time to install dependency **
+## Note
+- Coloc answers: "Do gene expression and the trait share the same causal variant(s)?" <br>
+- MR answers: "Does gene expression cause a change in the trait? And if so, how large is that effect?" <br>
+Often, fine-mapping plus colocalization will yield a single "top" variant (or a single CS in tight LD). In that scenario, we can't do a multi-instrument (IVW) MR becasue we lack multiple independent SNPs.
