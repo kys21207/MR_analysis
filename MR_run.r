@@ -68,6 +68,19 @@ gwas_formatted[, `:=`(id.outcome = "GWAS_trait", outcome = "GWAS_trait")]
 # Step 3: Harmonize the Data
 harmonized_data <- harmonise_data(eqtl_filtered, gwas_formatted)
 
+############################################################################
+## if there is only one instrument variant available 
+# Compute Wald Ratio Estimate
+wald_ratio <- harmonized_data$beta.outcome / harmonized_data$beta.exposure
+wald_se <- sqrt((harmonized_data$se.outcome^2 / harmonized_data$beta.exposure^2) + ((harmonized_data$beta.outcome^2 * harmonized_data$se.exposure^2) / (harmonized_data$beta.exposure^4)))
+wald_p <- 2 * pnorm(abs(wald_ratio / wald_se), lower.tail = FALSE)
+
+# Print Wald Ratio MR results
+cat("Wald Ratio MR Estimate:", wald_ratio, "\n")
+cat("Standard Error:", wald_se, "\n")
+cat("P-value:", wald_p, "\n")
+############################################################################
+
 # Step 4: Perform MR using IVW (Primary Method)
 mr_results <- mr(harmonized_data, method_list = c("mr_ivw"))
 
